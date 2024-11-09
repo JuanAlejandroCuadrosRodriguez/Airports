@@ -187,7 +187,7 @@ def obtener_info_ruta_azul(aeropuertos_original, fecha):
                 arrival_time = tramo_info['arrival']
             
             # Sumar el precio acumulado
-            total_price += float(tramo_info['price'].replace('$', ''))
+            total_price += float(tramo_info['price'].replace('$', '').replace(',', ''))
             
             # Agregar tramo al resumen de ruta
             route_info.append(tramo_info)
